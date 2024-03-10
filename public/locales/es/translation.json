@@ -1,3 +1,68 @@
 {
-  "pageTitle": "Bienvenido a Astro."
+  "header": {
+    "contact": "Contacto",
+    "languageSwitcher": "Cambiar a inglés"
+  },
+  "experience": {
+    "title": "Experiencia",
+    "sectionTitle": "Experiencia laboral",
+    "job1": {
+      "position": "Ingeniero de software SR",
+      "company": "Buenbit",
+      "description": "Desarrollo web y mobile para uno de los exchanges crypto más grandes de Argentina.",
+      "tools": "(React, React Native, Node, Nest, MySql)",
+      "timeframe": "2021 - Actualidad ..."
+    },
+    "job2": {
+      "position": "Ingeniero de software SR",
+      "company": "Elementum",
+      "description": "Desarrollo web y mobile para empresa de Supply Chain Estado Unidense.",
+      "tools": "(React, React Native, Node, Express, MongoDB)",
+      "timeframe": "2019 - 2021"
+    },
+    "job3": {
+      "position": "Ingeniero de software SSR",
+      "company": "Novatech Solutions / Phinxlab",
+      "description": "Desarrollo de proyectos por parte de la consultora para terceros, estuve a cargo de front, back y mobile, gestionando la totalidad de los proyectos que tenía a cargo.",
+      "tools": "(React, React Native, Node, Firebase, Bases de datos SQL, MongoDB)",
+      "timeframe": "2018 -2019"
+    },
+    "job4": {
+      "position": "Ingeniero de software JR",
+      "company": "C&S Informática",
+      "description": "Formando parte del equipo de investigacion y desarrollo fui probando distintas tecnologias y elaborando distintos proyectos, los cuales luego eran utilizados como herramientas por el equipo de desarrollo de la consultoría.",
+      "tools": "(React, React Native, Node, Bases de datos SQL y no SQL, Python, Tensorflow, Keras, Selenium Webdriver)",
+      "timeframe": "2017 - 2018"
+    }
+  },
+  "projects": {
+    "title": "Proyectos",
+    "code": "Código",
+    "googlePlay": "Google Play",
+    "website": "Web",
+    "project1": {
+      "title": "RungeCoin",
+      "description": "Crypto wallet DEFI multichain, Elaborada para gestionar crypto activos de manera facil y segura. Te permite establecer doble encryptacion, para no depender solo del sistema operativo a la hora de almacenar tu llave privada, ademas puedes conectarle hardware wallets (Ledger) para mantener tus cryptos a salvo.",
+      "link": "https://rungecoin-crypto-wallet.web.app",
+      "git": "https://github.com/nicolas-meilan/RungeCoin",
+      "androidPlayStore": "https://play.google.com/store/apps/details?id=com.RungeCoin"
+    }
+  },
+  "about": {
+    "title": "Sobre mí",
+    "description": "<p>Soy Nicolás, un apasionado ingeniero en informática graduado de la <strong>UNLaM</strong> en 2018.</p><p><strong>Con más de 7 años de experiencia en el campo del desarrollo de software</strong>, he tenido el privilegio de trabajar en diversas empresas. Durante este tiempo, he perfeccionado mis habilidades en una amplia gama de tecnologías y frameworks, tanto front-end como back-end.</p><p>Actualmente estoy trabajando en <strong>Buenbit, uno de los más importantes exchanges de criptomonedas de Argentina</strong>, donde soy parte fundamental del <strong>equipo de desarrollo  mobile</strong>. Ver el crecimiento de esta plataforma desde sus primeras etapas hasta su estado actual ha sido una experiencia gratificante y enriquecedora.</p>"
+  },
+  "presentation": {
+    "greetings": "Hola, Soy Meilan Nicolas",
+    "description": "+7 años de experiencia. <strong>Ingeniero en informática</strong> de Buenos Aires, Argentina. Soy <strong>desarrollador full-stack</strong> especializado en mobile apps con tecnologías JS."
+  },
+  "social": {
+    "git": "Github",
+    "linkedin": "Linkedin",
+    "mail": "Mail"
+  },
+  "webpage": {
+    "title": "Meilan Nicolas, Desarrollador web y mobile",
+    "description": "+7 años de experiencia en desarrollo web/mobile, con fuertes bases y conocimientos"
+  }
 }

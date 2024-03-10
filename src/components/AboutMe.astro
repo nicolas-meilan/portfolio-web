@@ -1,0 +1,19 @@
+---
+import { t } from 'i18next';
+import { Trans } from "astro-i18next/components";
+
+const IMAGE_ALT = "Meilan Sebastian Nicolas";
+const ABOUT_ME_PIC = '/me/aboutMe.jpg';
+---
+
+<article class="flex flex-col items-center justify-center gap-8 text-gray-300 md:flex-row">
+  <div
+    class="[&>p]:mb-4 [&>p>strong]:text-yellow-400 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
+  >
+    <Trans i18nKey="about.description">
+      {t('about.description')}
+    </Trans>
+  </div>
+
+  <img src={ABOUT_ME_PIC} alt={IMAGE_ALT} class="size-[200px] order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-yellow-500/10 ring-1 ring-white/30 " style="object-position: 50% 50%">
+</article>

@@ -1,0 +1,16 @@
+---
+import i18next from 'i18next';
+
+import { defaultLanguage } from '../languages';
+import Pill from './Pill.astro';
+
+// Works only for 2 languages
+const currentLanguage = i18next.language;
+const langToRedirect = i18next.languages.find((lang) => lang !== currentLanguage);
+
+const redirectionUrl = langToRedirect === defaultLanguage ? '' : langToRedirect;
+---
+
+<Pill href={`/${redirectionUrl}`} class="opacity-80">
+  {i18next.t('header.languageSwitcher')}
+</Pill>

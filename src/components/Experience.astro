@@ -1,0 +1,56 @@
+---
+import { t, exists } from "i18next";
+
+const experience: {
+  position: string;
+  company: string;
+  description: string;
+  tools: string;
+  timeframe: string;
+}[] = [];
+
+[...new Array(100)].some((_, index) => {
+  const i18nBaseKey = `experience.job${index}`;
+  const existKey = exists(i18nBaseKey);
+
+  if (existKey) {
+    experience.push({
+      position: t(`${i18nBaseKey}.position`),
+      company: t(`${i18nBaseKey}.company`),
+      description: t(`${i18nBaseKey}.description`),
+      tools: t(`${i18nBaseKey}.tools`),
+      timeframe: t(`${i18nBaseKey}.timeframe`),
+    });
+  }
+});
+---
+
+<ol class="relative">
+  {experience.map((item) => (
+    <li>
+      <div class="relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-white/40 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]">
+        <div class="relative pb-12 md:col-span-2">
+          <div class="sticky top-0">
+            <span class="text-yellow-400 -left-[42px] absolute rounded-full text-5xl">
+              &bull;
+            </span>
+
+            <h3 class="text-xl font-bold text-yellow-400">{item.position}</h3>
+            <h4 class="font-semibold text-xl text-white">
+              {item.company}
+            </h4>
+            <time class="p-0 m-0 text-sm text-white/80">
+              {item.timeframe}
+            </time>
+          </div>
+        </div>
+        <div class="relative flex flex-col gap-2 pb-4 text-gray-300 md:col-span-3">
+          {item.description}
+          <span class="text-yellow-200 text-pretty">
+            {item.tools}
+          </span>
+        </div>
+      </div>
+    </li>
+  ))}
+</ol>

@@ -1,0 +1,78 @@
+---
+import { t, exists } from "i18next";
+
+import Pill from "./Pill.astro";
+import Github from "../icons/Github.astro";
+import GooglePlay from "../icons/GooglePlay.astro";
+import Link from "../icons/Link.astro";
+
+const projects: {
+  title: string;
+  description: string;
+  image: string;
+  link?: string;
+  git?: string;
+  androidPlayStore?: string;
+}[] = [];
+
+[...new Array(100)].some((_, index) => {
+  const i18nBaseKey = `projects.project${index}`;
+  const existKey = exists(i18nBaseKey);
+
+  if (existKey) {
+    projects.push({
+      title: t(`${i18nBaseKey}.title`),
+      description: t(`${i18nBaseKey}.description`),
+      link: t(`${i18nBaseKey}.link`) || '',
+      git: t(`${i18nBaseKey}.git`) || '',
+      androidPlayStore: t(`${i18nBaseKey}.androidPlayStore`) || '',
+      image: `/projects/project${index}.png`
+    });
+  }
+});
+---
+
+<div class="flex flex-col gap-y-16">
+  {
+    projects.map(({ image, title, description, link, git, androidPlayStore }) => (
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <img
+              alt={title}
+              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:group-hover:scale-105"
+              loading="lazy"
+              src={image}
+            />
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-bold text-gray-100">{title}</h3>
+          <div class="flex flex-wrap mt-2">
+            <div class="mt-2 text-gray-400">{description}</div>
+            <footer class="flex items-end justify-start mt-4 gap-x-4">
+              {git && (
+                <Pill href={git}>
+                  <Github class="size-6" />
+                  {t('projects.code')}
+                </Pill>
+              )}
+              {androidPlayStore && (
+                <Pill href={androidPlayStore}>
+                  <GooglePlay class="size-6" />
+                  {t('projects.googlePlay')}
+                </Pill>
+              )}
+              {link && (
+                <Pill href={link}>
+                  <Link class="size-4" />
+                  {t('projects.website')}
+                </Pill>
+              )}
+            </footer>
+          </div>
+        </div>
+      </article>
+    ))
+  }
+</div>

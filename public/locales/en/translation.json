@@ -1,3 +1,68 @@
 {
-  "pageTitle": "Welcome to Astro."
+  "header": {
+    "contact": "Contact",
+    "languageSwitcher": "Switch to spanish"
+  },
+  "experience": {
+    "title": "Experience",
+    "sectionTitle": "Work experience",
+    "job1": {
+      "position": "Senior Software Engineer",
+      "company": "Buenbit",
+      "description": "Web and mobile development for one of Argentina's largest crypto exchanges.",
+      "tools": "(React, React Native, Node, Nest, MySql)",
+      "timeframe": "2021 - Today"
+    },
+    "job2": {
+      "position": "Senior Software Engineer",
+      "company": "Elementum",
+      "description": "Web and mobile development for a US-based Supply Chain company.",
+      "tools": "(React, React Native, Node, Express, MongoDB)",
+      "timeframe": "2019 - 2021"
+    },
+    "job3": {
+      "position": "Senior Software Engineer",
+      "company": "Novatech Solutions / Phinxlab",
+      "description": "Development of projects by the consultancy for third parties, I was in charge of front, back, and mobile, managing all the projects I was in charge of.",
+      "tools": "(React, React Native, Node, Firebase, SQL Databases, MongoDB)",
+      "timeframe": "2018 - 2019"
+    },
+    "job4": {
+      "position": "Junior Software Engineer",
+      "company": "C&S Informática",
+      "description": "As part of the research and development team, I tested different technologies and developed various projects, which were then used as tools by the consultancy's development team.",
+      "tools": "(React, React Native, Node, SQL and NoSQL Databases, Python, Tensorflow, Keras, Selenium Webdriver)",
+      "timeframe": "2017 - 2018"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "code": "Code",
+    "googlePlay": "Google Play",
+    "website": "Website",
+    "project1": {
+      "title": "RungeCoin",
+      "description": "DEFI multichain crypto wallet, Developed to manage crypto assets easily and securely. It allows you to establish double encryption, so as not to depend solely on the operating system when storing your private key, and you can also connect hardware wallets (Ledger) to keep your cryptos safe.",
+      "link": "https://rungecoin-crypto-wallet.web.app",
+      "git": "https://github.com/nicolas-meilan/RungeCoin",
+      "androidPlayStore": "https://play.google.com/store/apps/details?id=com.RungeCoin"
+    }
+  },
+  "about": {
+    "title": "About me",
+    "description": "<p>I am Nicolás, a passionate software engineer graduated from UNLaM in 2018.</p><p><strong>With more than 7 years of experience in software development</strong>, I have had the privilege of working in various companies. During this time, I have perfected my skills in a wide range of technologies and frameworks, both front-end and back-end.</p><p>I am currently working at <strong>Buenbit, one of the largest cryptocurrency exchanges in Argentina</strong>, where I am a fundamental part of the <strong>mobile development team</strong>. Seeing the growth of this platform from its early stages to its current state has been a rewarding and enriching experience.</p>"
+  },
+  "presentation": {
+    "greetings": "Hi! I'm Meilan Nicolas",
+    "description": "+7 years of experience. <strong>Software engineer</strong> from Buenos Aires, Argentina. I am a <strong>full-stack developer</strong> specialized in mobile apps with JS technologies."
+  },
+  "social": {
+      "git": "Github",
+      "linkedin": "Linkedin",
+      "mail": "Mail"
+  },
+  "webpage": {
+    "title": "Meilan Nicolas, Web and Mobile Developer",
+    "description": "+7 years of experience in web/mobile development, with strong foundations and knowledge"
+  }
 }
