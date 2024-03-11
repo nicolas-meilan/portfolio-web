@@ -11,13 +11,19 @@ export const PROFILE_PIC = `${import.meta.env.BASE_URL}/me/profile.jpg`;
 
 <div class="header-wrapper fixed w-full h-20 overflow-hidden top-0 z-10">
   <Background id={HEADER_BACKGROUND_ID} />
-  <div class="web-config-multiline flex-row gap-x-4 items-center px-4 justify-end hidden">
+  <div
+    class="web-config-multiline flex-row gap-x-4 items-center px-4 justify-end hidden"
+  >
     <LanguageSelector />
   </div>
   <header
     class="flex items-center justify-between mx-auto max-w-[1240px] px-4 h-20"
   >
-    <img class="header-image rounded-full w-12 h-12" src={PROFILE_PIC} alt="profile pic" />
+    <img
+      class="header-image rounded-full w-12 h-12"
+      src={PROFILE_PIC}
+      alt="profile pic"
+    />
     <div class="flex flex-row gap-x-4 items-center">
       <nav class="flex flex-row gap-x-4 whitespace-nowrap">
         <a
@@ -52,3 +58,40 @@ export const PROFILE_PIC = `${import.meta.env.BASE_URL}/me/profile.jpg`;
   </header>
 </div>
 <div class="mb-40"></div>
+
+<style is:inline>
+  @media (max-width: 500px) {
+    header {
+      justify-content: center !important;
+    }
+
+    .header-wrapper {
+      height: 7rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    .body-image {
+      display: flex;
+    }
+
+    .header-image {
+      display: none;
+    }
+  }
+
+  @media (max-width: 630px) {
+    .header-wrapper {
+      height: 8rem;
+      padding-top: 1rem;
+    }
+
+    .web-config {
+      display: none;
+    }
+
+    .web-config-multiline {
+      display: flex;
+    }
+  }
+</style>

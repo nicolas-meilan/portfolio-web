@@ -19,7 +19,7 @@ const BODY_BACKGROUND_ID = 'bodyBackground';
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href=`${import.meta.env.BASE_URL}/favicon.svg` />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
@@ -30,7 +30,7 @@ const BODY_BACKGROUND_ID = 'bodyBackground';
 		<Footer />
 	</body>
 
-	<script define:vars={{ HEADER_BACKGROUND_ID, BODY_BACKGROUND_ID }}>
+	<script is:inline define:vars={{ HEADER_BACKGROUND_ID, BODY_BACKGROUND_ID }}>
 		const headerBackground = document.getElementById(HEADER_BACKGROUND_ID);
 		const bodyBackground = document.getElementById(BODY_BACKGROUND_ID);
 		if (headerBackground && bodyBackground) {
@@ -72,41 +72,6 @@ const BODY_BACKGROUND_ID = 'bodyBackground';
 		@media (prefers-reduced-motion: reduce) {
 			html {
 				scroll-behavior: auto;
-			}
-		}
-
-		@media (max-width: 500px) {
-			header {
-				justify-content: center!important;
-			}
-
-			.header-wrapper {
-				height: 7rem;
-				padding-top: 1rem;
-				padding-bottom: 1rem;
-			}
-
-			.body-image {
-				display: flex;
-			}
-
-			.header-image {
-				display: none;
-			}
-		}
-
-		@media (max-width: 630px) {
-			.header-wrapper {
-				height: 8rem;
-				padding-top: 1rem;
-			}
-
-			.web-config {
-				display: none;
-			}
-
-			.web-config-multiline {
-				display: flex;
 			}
 		}
 	</style>

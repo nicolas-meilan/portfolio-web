@@ -1,0 +1,47 @@
+---
+import { t } from 'i18next';
+
+import SectionRoutes from '../sectionRoutes';
+import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import Presentation from '../components/Presentation.astro';
+import Experience from '../components/Experience.astro';
+import Projects from '../components/Projects.astro';
+import AboutMe from '../components/AboutMe.astro';
+import Briefcase from '../icons/Briefcase.astro';
+import Code from '../icons/Code.astro';
+import Person from '../icons/Person.astro';
+---
+
+<Layout
+	title={t('webpage.title')}
+	description={t('webpage.description')}
+>
+	<main class="space-y-40">
+		<Section>
+			<Presentation />
+		</Section>
+		<Section id={SectionRoutes.EXPERIENCE}>
+			<SectionTitle>
+				<Briefcase class="size-7" />
+				{t("experience.sectionTitle")}
+			</SectionTitle>
+			<Experience />
+		</Section>
+		<Section id={SectionRoutes.PROJECTS}>
+			<SectionTitle>
+				<Code class="size-7" />
+				{t("projects.title")}
+			</SectionTitle>
+			<Projects />
+		</Section>
+		<Section id={SectionRoutes.ABOUT}>
+			<SectionTitle>
+				<Person class="size-7" />
+				{t("about.title")}
+			</SectionTitle>
+			<AboutMe />
+		</Section>
+	</main>
+</Layout>

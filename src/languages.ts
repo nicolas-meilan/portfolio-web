@@ -4,4 +4,4 @@ export enum Languages {
 };
 
 export const defaultLanguage = Languages.ENGLISH;
-
+export const ignoreLanguages = ['cimode'];
