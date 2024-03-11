@@ -2,6 +2,7 @@
 import { t } from "i18next";
 import { Trans } from "astro-i18next/components";
 
+import { PROFILE_PIC } from '../components/Header.astro';
 import Pill from "../components/Pill.astro";
 import Github from "../icons/Github.astro";
 import Linkedin from "../icons/Linkedin.astro";
@@ -12,13 +13,14 @@ const GITHUB_LINK = "https://github.com/nicolas-meilan";
 const LINKEDIN_LINK = "https://www.linkedin.com/in/sebasti\u00E1n-nicol\u00E1s-meil\u00E1n-884043141";
 ---
 
+<img class="body-image rounded-full w-24 h-24 mb-10 hidden" src={PROFILE_PIC} alt="profile pic" />
 <h1 class="text-white text-5xl font-bold pb-10">
   {t("presentation.greetings")}
 </h1>
-<h2 class="text-2xl text-wrap pb-3 text-gray-300 [&>strong]:text-yellow-400 [&>strong]:font-semibold">
+<h2 class="text-2xl text-pretty pb-4 text-gray-300 [&>strong]:text-yellow-400 [&>strong]:font-semibold max-w-2xl">
   <Trans i18nKey="presentation.description">{t('presentation.description')}</Trans>
 </h2>
-<nav class="flex flex-row gap-x-4 text-sm">
+<nav class="flex gap-x-4 gap-y-2 text-sm flex-wrap">
   <Pill href={GITHUB_LINK}>
     <Github class="size-4" />
     {t("social.git")}

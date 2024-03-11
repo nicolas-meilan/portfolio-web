@@ -1,8 +1,8 @@
 ---
-import Header, { HEADER_BACKGROUND_ID } from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import Background from '../components/Background.astro';
-import '@fontsource-variable/onest';
+import Header, { HEADER_BACKGROUND_ID } from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Background from "../components/Background.astro";
+import "@fontsource-variable/onest";
 interface Props {
 	title: string;
 	description: string;
@@ -24,14 +24,13 @@ const BODY_BACKGROUND_ID = 'bodyBackground';
 		<title>{title}</title>
 	</head>
 	<body class="relative">
-		<Background id={BODY_BACKGROUND_ID}/>
+		<Background id={BODY_BACKGROUND_ID} />
 		<Header />
 		<slot />
 		<Footer />
 	</body>
 
 	<script define:vars={{ HEADER_BACKGROUND_ID, BODY_BACKGROUND_ID }}>
-
 		const headerBackground = document.getElementById(HEADER_BACKGROUND_ID);
 		const bodyBackground = document.getElementById(BODY_BACKGROUND_ID);
 		if (headerBackground && bodyBackground) {
@@ -39,8 +38,16 @@ const BODY_BACKGROUND_ID = 'bodyBackground';
 			headerBackground.style.height = `${bodySize.height.toString()}px`;
 		}
 
-		document.addEventListener('scroll', () => {
-			if (headerBackground) headerBackground.style.transform = `translateY(-${window.scrollY}px)`;
+		document.addEventListener("scroll", () => {
+			if (headerBackground)
+				headerBackground.style.transform = `translateY(-${window.scrollY}px)`;
+		});
+
+		window.addEventListener("resize", () => {
+			if (headerBackground && bodyBackground) {
+				const bodySize = bodyBackground.getBoundingClientRect();
+				headerBackground.style.height = `${bodySize.height.toString()}px`;
+			}
 		});
 	</script>
 
@@ -48,6 +55,7 @@ const BODY_BACKGROUND_ID = 'bodyBackground';
 		:root {
 			color-scheme: light dark;
 		}
+
 		html {
 			font-family: "Onest Variable", system-ui, sans-serif;
 			scroll-behavior: smooth;
@@ -64,6 +72,41 @@ const BODY_BACKGROUND_ID = 'bodyBackground';
 		@media (prefers-reduced-motion: reduce) {
 			html {
 				scroll-behavior: auto;
+			}
+		}
+
+		@media (max-width: 500px) {
+			header {
+				justify-content: center!important;
+			}
+
+			.header-wrapper {
+				height: 7rem;
+				padding-top: 1rem;
+				padding-bottom: 1rem;
+			}
+
+			.body-image {
+				display: flex;
+			}
+
+			.header-image {
+				display: none;
+			}
+		}
+
+		@media (max-width: 630px) {
+			.header-wrapper {
+				height: 8rem;
+				padding-top: 1rem;
+			}
+
+			.web-config {
+				display: none;
+			}
+
+			.web-config-multiline {
+				display: flex;
 			}
 		}
 	</style>
