@@ -3,7 +3,7 @@ import { t } from 'i18next';
 import { Trans } from "astro-i18next/components";
 
 const IMAGE_ALT = "Meilan Sebastian Nicolas";
-const ABOUT_ME_PIC = '/me/aboutMe.jpg';
+const ABOUT_ME_PIC = `${import.meta.env.BASE_URL}/me/aboutMe.jpg`;
 ---
 
 <article class="flex flex-col items-center justify-center gap-8 text-gray-300 md:flex-row">

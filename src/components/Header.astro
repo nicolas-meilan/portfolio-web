@@ -6,7 +6,7 @@ import LanguageSelector from "./LanguageSelector.astro";
 import Background from "./Background.astro";
 
 export const HEADER_BACKGROUND_ID = "headerBackground";
-export const PROFILE_PIC = "/me/profile.jpg";
+export const PROFILE_PIC = `${import.meta.env.BASE_URL}/me/profile.jpg`;
 ---
 
 <div class="header-wrapper fixed w-full h-20 overflow-hidden top-0 z-10">

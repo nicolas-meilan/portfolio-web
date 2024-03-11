@@ -11,6 +11,6 @@ const langToRedirect = i18next.languages.find((lang) => lang !== currentLanguage
 const redirectionUrl = langToRedirect === defaultLanguage ? '' : langToRedirect;
 ---
 
-<Pill href={`/${redirectionUrl}`} class="opacity-80 transition hover:text-yellow-400 hover:opacity-100">
+<Pill href={`${import.meta.env.BASE_URL}/${redirectionUrl}`} class="opacity-80 transition hover:text-yellow-400 hover:opacity-100">
   {i18next.t('header.languageSwitcher')}
 </Pill>

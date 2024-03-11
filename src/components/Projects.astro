@@ -26,7 +26,7 @@ const projects: {
       link: t(`${i18nBaseKey}.link`) || '',
       git: t(`${i18nBaseKey}.git`) || '',
       androidPlayStore: t(`${i18nBaseKey}.androidPlayStore`) || '',
-      image: `/projects/project${index}.png`
+      image: `${import.meta.env.BASE_URL}/projects/project${index}.png`
     });
   }
 });
