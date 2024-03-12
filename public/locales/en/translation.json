@@ -43,7 +43,7 @@
     "project1": {
       "title": "RungeCoin",
       "description": "DEFI multichain crypto wallet, Developed to manage crypto assets easily and securely. It allows you to establish double encryption, so as not to depend solely on the operating system when storing your private key, and you can also connect hardware wallets (Ledger) to keep your cryptos safe.",
-      "link": "https://rungecoin-crypto-wallet.web.app",
+      "link": "https://rungecoin.web.app",
       "git": "https://github.com/nicolas-meilan/RungeCoin",
       "androidPlayStore": "https://play.google.com/store/apps/details?id=com.RungeCoin"
     }

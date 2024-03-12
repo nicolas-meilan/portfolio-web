@@ -43,7 +43,7 @@
     "project1": {
       "title": "RungeCoin",
       "description": "Crypto wallet DEFI multichain, Elaborada para gestionar crypto activos de manera facil y segura. Te permite establecer doble encryptacion, para no depender solo del sistema operativo a la hora de almacenar tu llave privada, ademas puedes conectarle hardware wallets (Ledger) para mantener tus cryptos a salvo.",
-      "link": "https://rungecoin-crypto-wallet.web.app",
+      "link": "https://rungecoin.web.app",
       "git": "https://github.com/nicolas-meilan/RungeCoin",
       "androidPlayStore": "https://play.google.com/store/apps/details?id=com.RungeCoin"
     }
