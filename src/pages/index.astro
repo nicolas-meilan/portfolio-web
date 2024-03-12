@@ -6,7 +6,7 @@ changeLanguage("en");
 
 <script is:inline define:vars={{ base: import.meta.env.BASE_URL }}>
   const lang = navigator.language;
-  console.log('es' + window.location.hash)
+
   if (lang.startsWith('es')) {
       window.location.replace(`${base}/es${window.location.hash || ''}`);
   } else {

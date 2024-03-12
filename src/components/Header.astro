@@ -9,15 +9,15 @@ export const HEADER_BACKGROUND_ID = "headerBackground";
 export const PROFILE_PIC = `${import.meta.env.BASE_URL}/me/profile.jpg`;
 ---
 
-<div class="header-wrapper fixed w-full h-20 overflow-hidden top-0 z-10">
+<header class="header-wrapper fixed w-full h-20 overflow-hidden top-0 z-10">
   <Background id={HEADER_BACKGROUND_ID} />
   <div
     class="web-config-multiline flex-row gap-x-4 items-center px-4 justify-end hidden"
   >
     <LanguageSelector />
   </div>
-  <header
-    class="flex items-center justify-between mx-auto max-w-[1240px] px-4 h-20"
+  <div
+    class="main-header flex flex-row items-center justify-between mx-auto max-w-[1240px] px-4 h-20"
   >
     <img
       class="header-image rounded-full w-12 h-12"
@@ -27,25 +27,25 @@ export const PROFILE_PIC = `${import.meta.env.BASE_URL}/me/profile.jpg`;
     <div class="flex flex-row gap-x-4 items-center">
       <nav class="flex flex-row gap-x-4 whitespace-nowrap">
         <a
-          class="opacity-80 transition hover:text-yellow-400 hover:opacity-100"
+          class="opacity-80 text-white transition hover:text-yellow-400 hover:opacity-100"
           href={`#${SectionRoutes.EXPERIENCE}`}
         >
           {t("experience.title")}
         </a>
         <a
-          class="opacity-80 transition hover:text-yellow-400 hover:opacity-100"
+          class="opacity-80 text-white transition hover:text-yellow-400 hover:opacity-100"
           href={`#${SectionRoutes.PROJECTS}`}
         >
           {t("projects.title")}
         </a>
         <a
-          class="opacity-80 transition hover:text-yellow-400 hover:opacity-100"
+          class="opacity-80 text-white transition hover:text-yellow-400 hover:opacity-100"
           href={`#${SectionRoutes.ABOUT}`}
         >
           {t("about.title")}
         </a>
         <a
-          class="opacity-80 transition hover:text-yellow-400 hover:opacity-100"
+          class="opacity-80 text-white transition hover:text-yellow-400 hover:opacity-100"
           href=`mailto: ${MAIL}`
         >
           {t("header.contact")}
@@ -55,20 +55,13 @@ export const PROFILE_PIC = `${import.meta.env.BASE_URL}/me/profile.jpg`;
         <LanguageSelector />
       </div>
     </div>
-  </header>
-</div>
-<div class="mb-40"></div>
+  </div>
+</header>
 
 <style is:inline>
   @media (max-width: 500px) {
-    header {
-      justify-content: center !important;
-    }
-
-    .header-wrapper {
-      height: 7rem;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
+    .main-header {
+      justify-content: center;
     }
 
     .body-image {
@@ -81,6 +74,10 @@ export const PROFILE_PIC = `${import.meta.env.BASE_URL}/me/profile.jpg`;
   }
 
   @media (max-width: 630px) {
+    .section {
+      padding-top: 3rem;
+    }
+
     .header-wrapper {
       height: 8rem;
       padding-top: 1rem;
