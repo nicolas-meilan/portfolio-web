@@ -1,15 +1,22 @@
 ---
-import { changeLanguage } from "i18next";
+import { t, changeLanguage } from "i18next";
+
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 changeLanguage("en");
 ---
 
-<script is:inline define:vars={{ base: import.meta.env.BASE_URL }}>
-  const lang = navigator.language;
+<BaseLayout
+  title={t('webpage.title')}
+  description={t('webpage.description')}
+>
+  <script is:inline define:vars={{ base: import.meta.env.BASE_URL }}>
+    const lang = navigator.language;
 
-  if (lang.startsWith('es')) {
+    if (lang.startsWith('es')) {
       window.location.replace(`${base}/es${window.location.hash || ''}`);
-  } else {
+    } else {
       window.location.replace(`${base}/en${window.location.hash || ''}`);
-  }
-</script>
+    }
+  </script>
+</BaseLayout>
