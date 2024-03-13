@@ -1,6 +1,8 @@
 ---
 import { t } from "i18next";
 
+import { LIGHT, DARK } from '../components/ThemeSwitch.astro';
+
 const { class: bodyClass } = Astro.props;
 ---
 
@@ -8,7 +10,7 @@ const { class: bodyClass } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={t('webpage.description')} />
+    <meta name="description" content={t("webpage.description")} />
     <meta name="viewport" content="width=device-width" />
     <link
       rel="icon"
@@ -16,7 +18,26 @@ const { class: bodyClass } = Astro.props;
       href=`${import.meta.env.BASE_URL}/favicon.svg`
     />
     <meta name="generator" content={Astro.generator} />
-    <title>{t('webpage.title')}</title>
+    <title>{t("webpage.title")}</title>
+    <script
+      is:inline
+      define:vars={{
+        LIGHT,
+        DARK,
+      }}
+    >
+      if (
+        localStorage.theme === DARK ||
+        (!('theme' in localStorage) &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        document.documentElement.classList.add(DARK);
+        localStorage.theme = DARK;
+      } else {
+        document.documentElement.classList.remove(DARK);
+        localStorage.theme = LIGHT;
+      }
+    </script>
   </head>
   <body class={bodyClass}>
     <slot />

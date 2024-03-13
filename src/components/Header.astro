@@ -1,11 +1,12 @@
 ---
-import { t } from "i18next";
-import SectionRoutes from "../sectionRoutes";
-import { MAIL } from "./Presentation.astro";
-import LanguageSelector from "./LanguageSelector.astro";
-import Background from "./Background.astro";
+import { t } from 'i18next';
+import SectionRoutes from '../sectionRoutes';
+import { MAIL } from './Presentation.astro';
+import LanguageSelector from './LanguageSelector.astro';
+import ThemeSwitch from './ThemeSwitch.astro';
+import Background from './Background.astro';
 
-export const HEADER_BACKGROUND_ID = "headerBackground";
+export const HEADER_BACKGROUND_ID = 'headerBackground';
 export const PROFILE_PIC = `${import.meta.env.BASE_URL}/me/profile.jpg`;
 ---
 
@@ -15,6 +16,7 @@ export const PROFILE_PIC = `${import.meta.env.BASE_URL}/me/profile.jpg`;
     class="web-config-multiline flex-row gap-x-4 items-center px-4 justify-end hidden"
   >
     <LanguageSelector />
+    <ThemeSwitch id="themeSwitchSmallWindow" />
   </div>
   <div
     class="main-header flex flex-row items-center justify-between mx-auto max-w-[1240px] px-4 h-20"
@@ -27,25 +29,25 @@ export const PROFILE_PIC = `${import.meta.env.BASE_URL}/me/profile.jpg`;
     <div class="flex flex-row gap-x-4 items-center">
       <nav class="flex flex-row gap-x-4 whitespace-nowrap">
         <a
-          class="opacity-80 text-white transition hover:text-yellow-400 hover:opacity-100"
+          class="opacity-80 dark:text-white text-black transition dark:hover:text-yellow-400 hover:text-yellow-500 hover:opacity-100"
           href={`#${SectionRoutes.EXPERIENCE}`}
         >
           {t("experience.title")}
         </a>
         <a
-          class="opacity-80 text-white transition hover:text-yellow-400 hover:opacity-100"
+          class="opacity-80 dark:text-white text-black transition dark:hover:text-yellow-400 hover:text-yellow-500 hover:opacity-100"
           href={`#${SectionRoutes.PROJECTS}`}
         >
           {t("projects.title")}
         </a>
         <a
-          class="opacity-80 text-white transition hover:text-yellow-400 hover:opacity-100"
+          class="opacity-80 dark:text-white text-black transition dark:hover:text-yellow-400 hover:text-yellow-500 hover:opacity-100"
           href={`#${SectionRoutes.ABOUT}`}
         >
           {t("about.title")}
         </a>
         <a
-          class="opacity-80 text-white transition hover:text-yellow-400 hover:opacity-100"
+          class="opacity-80 dark:text-white text-black transition dark:hover:text-yellow-400 hover:text-yellow-500 hover:opacity-100"
           href=`mailto: ${MAIL}`
         >
           {t("header.contact")}
@@ -53,6 +55,7 @@ export const PROFILE_PIC = `${import.meta.env.BASE_URL}/me/profile.jpg`;
       </nav>
       <div class="web-config flex flex-row gap-x-4 items-center">
         <LanguageSelector />
+        <ThemeSwitch id="themeSwitch" />
       </div>
     </div>
   </div>
@@ -73,7 +76,7 @@ export const PROFILE_PIC = `${import.meta.env.BASE_URL}/me/profile.jpg`;
     }
   }
 
-  @media (max-width: 630px) {
+  @media (max-width: 670px) {
     .section {
       padding-top: 3rem;
     }
