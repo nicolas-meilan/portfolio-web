@@ -64,5 +64,8 @@
   "webpage": {
     "title": "Meilan Nicolas, Web and Mobile Developer",
     "description": "+7 years of experience in web/mobile development, with strong foundations and knowledge"
+  },
+  "footer": {
+    "codeLink": "Portfolio code"
   }
 }

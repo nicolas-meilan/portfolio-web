@@ -64,5 +64,8 @@
   "webpage": {
     "title": "Meilan Nicolas, Desarrollador web y mobile",
     "description": "+7 años de experiencia en desarrollo web/mobile, con fuertes bases y conocimientos"
+  },
+  "footer": {
+    "codeLink": "Código del portfolio"
   }
 }

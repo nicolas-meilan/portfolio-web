@@ -1,1 +1,14 @@
-<div class="pt-40 h-20" />
+---
+import { t } from 'i18next';
+
+import Github from '../icons/Github.astro';
+
+const PORTFOLIO_CODE_URL = 'https://github.com/nicolas-meilan/portfolio-web';
+---
+
+<footer class="flex flex-row justify-end mt-40 mx-auto max-w-[1240px] px-4 py-4 w-full">
+  <a href={PORTFOLIO_CODE_URL} class="flex flex-row gap-x-2 items-center text-sm dark:text-gray-400 text-gray-600 hover:underline">
+    <Github class="size-4"/>
+    {t('footer.codeLink')}
+  </a>
+</footer>
