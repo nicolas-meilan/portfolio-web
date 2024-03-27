@@ -13,3 +13,5 @@
 - [Background](https://bg.ibelick.com)
 - [icons](https://tabler.io/icons)
 -  [mockups](https://www.shots.so/)
+
+Based on [midudev portfolio](https://github.com/midudev/porfolio.dev) 
