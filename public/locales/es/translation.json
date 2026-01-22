@@ -8,10 +8,10 @@
     "sectionTitle": "Experiencia laboral",
     "job1": {
       "position": "Ingeniero de software SR",
-      "company": "Buenbit",
+      "company": "Buenbit by Nexo",
       "description": "Desarrollo web y mobile para uno de los exchanges crypto más grandes de Argentina.",
       "tools": "(React, React Native, Node, Nest, MySql)",
-      "timeframe": "2021 - Actualidad ..."
+      "timeframe": "2021 - 2026"
     },
     "job2": {
       "position": "Ingeniero de software SR",
@@ -50,7 +50,7 @@
   },
   "about": {
     "title": "Sobre mí",
-    "description": "<p>Soy Nicolás, un apasionado ingeniero en informática graduado de la <strong>UNLaM</strong> en 2018.</p><p><strong>Con más de 10 años de experiencia en el campo del desarrollo de software</strong>, he tenido el privilegio de trabajar en diversas empresas. Durante este tiempo, he perfeccionado mis habilidades en una amplia gama de tecnologías y frameworks, tanto front-end como back-end.</p><p>Actualmente estoy trabajando en <strong>Buenbit, uno de los más importantes exchanges de criptomonedas de Argentina</strong>, donde soy parte fundamental del <strong>equipo de desarrollo  mobile</strong>. Ver el crecimiento de esta plataforma desde sus primeras etapas hasta su estado actual ha sido una experiencia gratificante y enriquecedora.</p>"
+    "description": "<p>Soy Nicolás, un apasionado ingeniero en informática graduado de la <strong>UNLaM</strong> en 2018.</p><p><strong>Con más de 10 años de experiencia en el campo del desarrollo de software</strong>, he tenido el privilegio de trabajar en diversas empresas. Durante este tiempo, he perfeccionado mis habilidades en una amplia gama de tecnologías y frameworks, tanto front-end como back-end.</p>"
   },
   "presentation": {
     "greetings": "Hola, Soy Meilan Nicolas",
