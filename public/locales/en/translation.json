@@ -11,7 +11,7 @@
       "company": "Buenbit",
       "description": "Web and mobile development for one of Argentina's largest crypto exchanges.",
       "tools": "(React, React Native, Node, Nest, MySql)",
-      "timeframe": "2021 - Today"
+      "timeframe": "2021 - 2026"
     },
     "job2": {
       "position": "Senior Software Engineer",
@@ -50,7 +50,7 @@
   },
   "about": {
     "title": "About me",
-    "description": "<p>I am Nicolás, a passionate software engineer graduated from UNLaM in 2018.</p><p><strong>With more than 10 years of experience in software development</strong>, I have had the privilege of working in various companies. During this time, I have perfected my skills in a wide range of technologies and frameworks, both front-end and back-end.</p><p>I am currently working at <strong>Buenbit, one of the largest cryptocurrency exchanges in Argentina</strong>, where I am a fundamental part of the <strong>mobile development team</strong>. Seeing the growth of this platform from its early stages to its current state has been a rewarding and enriching experience.</p>"
+    "description": "<p>I am Nicolás, a passionate software engineer graduated from UNLaM in 2018.</p><p><strong>With more than 10 years of experience in software development</strong>, I have had the privilege of working in various companies. During this time, I have perfected my skills in a wide range of technologies and frameworks, both front-end and back-end."
   },
   "presentation": {
     "greetings": "Hi! I'm Meilan Nicolas",
